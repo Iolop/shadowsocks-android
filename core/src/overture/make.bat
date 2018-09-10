@@ -60,8 +60,6 @@ IF "%ERRORLEVEL%" == 1 (
     EXIT 1
 )
 
-
-REM SET GOROOT=%DIR%\go
 SET GOPATH=%DIR%
 SET PATH=%GOPATH%\bin;%PATH%
 
