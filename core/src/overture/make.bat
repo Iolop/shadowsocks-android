@@ -60,17 +60,10 @@ IF "%ERRORLEVEL%" == 1 (
     EXIT 1
 )
 
-IF NOT EXIST %DIR%\go\bin\go.exe (
-    ECHO "Build the custom go"
 
-    PUSHD %DIR%\go\src
-    CALL make.bat
-    POPD
-)
-
-SET GOROOT=%DIR%\go
+REM SET GOROOT=%DIR%\go
 SET GOPATH=%DIR%
-SET PATH=%GOROOT%\bin;%GOPATH%\bin;%PATH%
+SET PATH=%GOPATH%\bin;%PATH%
 
 SET BUILD=1
 IF EXIST "%TARGET%\armeabi-v7a\liboverture.so" (
